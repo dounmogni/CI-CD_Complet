@@ -41,7 +41,7 @@ pipeline {
             steps {
                   sshagent(['deploy_user']) {
                        // some block
-			sh "scp -o StrictHostKeyChecking=no Build_Deploy_On_Tomcat-Container/webapp/target/webapp.war toto@192.168.0.12:/opt/tomcat/webapps/"
+			sh "scp -o StrictHostKeyChecking=no /var/lib/jenkins/workspace/Build_Deploy_On_Tomcat-Container/webapp/target/webapp.war toto@192.168.0.12:/opt/tomcat/webapps/"
                  }
                 
             }
