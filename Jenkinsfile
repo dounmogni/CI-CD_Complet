@@ -9,12 +9,12 @@ pipeline {
 
     stages {
         
-        stage('clone'){
-          steps {
+        //stage('clone'){
+        //  steps {
                 // Get some code from a GitHub repository
-                git 'https://github.com/dounmogni/CI-CD_Complet.git'
-          }  
-        }
+              //  git 'https://github.com/dounmogni/CI-CD_Complet.git'
+         // }  
+       // }
         
         stage('Build') {
             steps {
