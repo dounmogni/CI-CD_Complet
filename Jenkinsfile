@@ -37,8 +37,16 @@ pipeline {
             }
         }    
             
-
-            
+       stage('deploy') {
+            steps {
+                  sshagent(['deploy_user']) {
+                       // some block
+			sh " scp -o StrictHostKeyChecking=no webapp/target/webapp.war jenkins@192.168.0.12:/opt/tomcat/webapps/"
+                 }
+                
+            }
+        }
+        
         
     }
 }
